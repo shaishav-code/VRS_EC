@@ -5,9 +5,9 @@
     <classes>
       <class name="EC_TestCase.TC_TimeSheet">
         <methods>
-          <include name="TimeSheet"/>
           <include name="tearDown"/>
           <include name="lanuchWebsite"/>
+          <include name="TimeSheet1"/>
         </methods>
       </class> <!-- EC_TestCase.TC_TimeSheet -->
     </classes>

@@ -38,10 +38,10 @@ import VEC_Page_Object.Timesheets;
 		TS.Work_Type("Free");
 		Thread.sleep(2000);
 		
-		//TS.click_Hours();
+	    TS.Click_Hours();
 		Thread.sleep(2000);
 		
-		//TS.click_Notes();
+		TS.click_Notes();
 		
 		//TS.Add_Icon();
 		Thread.sleep(2000);
@@ -64,13 +64,13 @@ import VEC_Page_Object.Timesheets;
 	    TL.select_Timesheet();
 		Thread.sleep(2000);
 			
-		TL.Reason_field();
+		//TL.Reason_field();
 		Thread.sleep(2000);
 		
-		TL.Reason_Type("Came Late");
+		//TL.Reason_Type("Came Late");
 		Thread.sleep(5000);
 		
-		TL.Set_Hours();
+		//TL.Set_Hours();
 		Thread.sleep(2000);
 	
 		TL.Select_Notes();
@@ -79,7 +79,6 @@ import VEC_Page_Object.Timesheets;
 		TL.Add_Button();
 		Thread.sleep(2000);
 		
-		TL.ScrollUp_Click();
 	
 		TL.Click_from_date();
 		Thread.sleep(2000);

@@ -31,6 +31,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
+		
 	}
 	
 	@BeforeMethod(alwaysRun = true)
@@ -56,16 +57,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			
 	 }
 	 
-	 public static String getScreenshots(String testCaseName, WebDriver driver) throws java.io.IOException {
-			TakesScreenshot src = (TakesScreenshot) driver;
-			File source = src.getScreenshotAs(OutputType.FILE);
-			File file = new File(System.getProperty("user.dir") + "//Reports" + testCaseName + ".png");
-			FileUtils.copyFile(source, file);
-			return System.getProperty("user.dir") + testCaseName + ".png";
+	
 		}
 
-	
-}
+
 
 	
 	

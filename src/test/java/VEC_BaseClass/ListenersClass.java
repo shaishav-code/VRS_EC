@@ -51,16 +51,17 @@ public class ListenersClass extends BASE_CLASS implements ITestListener {
 		}
 		// Take screen and Attached to reports
 		String srcFilePath = null;
-		try {
-			srcFilePath = getScreenshots(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			System.out.println("Exception occured while taking screenshot");
-			e.printStackTrace();
-		}
+		srcFilePath = getScreenshots(result.getMethod().getMethodName(), driver);
 		//extentTest.get().addScreenCaptureFromPath(srcFilePath, result.getMethod().getMethodName());
 		test.addScreenCaptureFromPath(srcFilePath, result.getMethod().getMethodName());		
 
 	}
+
+	private String getScreenshots(String methodName, WebDriver driver2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	@Override
 	public void onTestSkipped(ITestResult result) {

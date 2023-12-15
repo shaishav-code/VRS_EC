@@ -102,7 +102,7 @@ import AbstractComponents.AbstractComponentsMethods;
     
    //============ TimeSheet field click Select Work Type (Free)============
     
-           @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text() = \"Came Late\"]") 
+           @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text() = \"Free\"]") 
            private List<WebElement>  WorkType ;
      
 	       public void Work_Type (String select_WorkType )
@@ -119,10 +119,10 @@ import AbstractComponents.AbstractComponentsMethods;
       
     //============ TimeSheet field click Hours field ============
     
-           @FindBy(xpath ="//*[@id='tshours']") 
+           @FindBy(xpath ="//*[@placeholder='Enter Hours']") 
            private WebElement Select_Hours;
     
-           public void click_Hours()  {
+           public void Click_Hours()  {
     	   Select_Hours.click();
     	   Select_Hours.sendKeys("8");
     }
@@ -134,7 +134,7 @@ import AbstractComponents.AbstractComponentsMethods;
     
           public void click_Notes()  {
     	  Select_Notes.click();
-    	  Select_Notes.sendKeys("  ");
+    	  Select_Notes.sendKeys("Hii");
     }
  
     //============ TimeSheet field click Add button field ============  
@@ -160,7 +160,7 @@ import AbstractComponents.AbstractComponentsMethods;
     
     //============ TimeSheet field click Select Reason (Came Late) ============
     
-        @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text()=\"Came Late\"]") 
+        @FindBy(xpath = "//*[@class='chosen-results']//*[text()=\"Came Late\"]") 
         private List<WebElement>  ReasonType ;
    
 	    public void  Reason_Type(String select_Reason )
@@ -177,7 +177,7 @@ import AbstractComponents.AbstractComponentsMethods;
 	  
     //============ TimeSheet field Hours field ============
 	    
-	     @FindBy(xpath ="//*[@id='hrAreaDiv']/div/div/input") 
+	     @FindBy(xpath ="//*[@id='leaveHours']") 
 	     private WebElement Hours ;
 	    
 	     public void Set_Hours()  {
@@ -205,23 +205,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	Add_button_2.click();
 
       }
-              
-    //==================== Scroll down ================================		
-		
-      public void ScrollUp_Click() {
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-////  		 js.executeScript("window.scrollBy(0,1000)");
-//          js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-    	  Actions actions = new Actions(driver);
-    	  actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
-
-       }
-        
-  	public void scrollToElement() {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("arguments[0].scrollIntoView;", Search_button);
-	}
-      
+    
     //============ TimeSheet field click From date field ============ 
       
           @FindBy(xpath ="//input[@id='fromDate']")

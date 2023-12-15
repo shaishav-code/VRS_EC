@@ -28,7 +28,7 @@ import VEC_Page_Object.Support_ticket;
 		LS.Libriry();
 		Thread.sleep(2000); 
 		
-		LS.Select_Snacks();
+	    LS.Select_Snacks();
 		Thread.sleep(2000); 
 		
 		LS.Select_OrderSnacks();
@@ -36,6 +36,7 @@ import VEC_Page_Object.Support_ticket;
 	
 	    @Test(priority = 2)
 	    public void My_order () throws InterruptedException {		
+	    	
 		Loginlogout();
 		Thread.sleep(2000);
 		
@@ -45,6 +46,7 @@ import VEC_Page_Object.Support_ticket;
 		Thread.sleep(2000);
 		
 		LS.Click_MyOrder();
+		Thread.sleep(2000);
 		
 		LS.From_date();
 		
