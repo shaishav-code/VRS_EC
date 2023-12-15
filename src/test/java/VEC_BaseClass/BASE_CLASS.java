@@ -21,13 +21,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 	public Login_Page MyLoginPage;
 		
 	public WebDriver invokeDriver() {	
-	ChromeOptions options = new ChromeOptions();
-	options.addArguments("--remote-allow-origins=*");
-	WebDriverManager.chromedriver().setup();
-
+	
+		ChromeOptions options = new ChromeOptions();
+	    options.addArguments("--remote-allow-origins=*");
+	    WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver(options);
 	    Logger.getLogger("org.openqa.selenium").setLevel(Level.ALL);
-
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;

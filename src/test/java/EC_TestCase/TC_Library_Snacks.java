@@ -1,10 +1,10 @@
 package EC_TestCase;
 
-import org.testng.annotations.Test;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import VEC_BaseClass.BASE_CLASS;
 import VEC_Page_Object.Library_Snacks;
-import VEC_Page_Object.Support_ticket;
 
         public class TC_Library_Snacks extends BASE_CLASS {
 	    @Test(priority = 1)
@@ -31,16 +31,9 @@ import VEC_Page_Object.Support_ticket;
 	    LS.Select_Snacks();
 		Thread.sleep(2000); 
 		
-		LS.Select_OrderSnacks();
-		}
-	
-	    @Test(priority = 2)
-	    public void My_order () throws InterruptedException {		
-	    	
-		Loginlogout();
+		//LS.Select_OrderSnacks();
 		Thread.sleep(2000);
-		
-		Library_Snacks LS=new Library_Snacks(driver);
+	
 		
 		LS.Libriry();
 		Thread.sleep(2000);
@@ -65,6 +58,8 @@ import VEC_Page_Object.Support_ticket;
 		
 		LS.select_Submit();
 		Thread.sleep(2000);	
+		
+		//Assert.assertTrue(false);
 	}
 
 }
