@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<!--suite-->
+	<listeners>
+		<listener class-name="VEC_BaseClass.ListenersClass"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+           <class name="EC_TestCase.LoginPage"/>
+           <class name="EC_TestCase.TC_Dashboard"/> 
+           <class name="EC_TestCase.TC_Project"/> 
+           <class name="EC_TestCase.TC_Marketing"/>
+           <class name="EC_TestCase.TC_badges"/>
+           <class name="EC_TestCase.TC_Support"/>
+           <class name="EC_TestCase.TC_TimeSheet"/>
+           <class name="EC_TestCase.TC_Library_Snacks"/>
+           <class name="EC_TestCase.TC_myprofile"/>
+           <class name="EC_TestCase.TC_Forgot_password"/> 
+            
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+
+
+
+
+
