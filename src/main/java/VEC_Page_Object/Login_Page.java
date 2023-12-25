@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponentsMethods;
 
-public class Login_Page{
-  public static WebDriver driver;
-
-	public Login_Page(WebDriver driver) {
-		
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
+public class Login_Page extends AbstractComponentsMethods{
+	  public static WebDriver driver;
+      public Login_Page(WebDriver driver) {
+	   super(driver);
+	   this.driver = driver;
+	   PageFactory.initElements(driver, this);
+			
+		}
 
 	// Invoke Method
 

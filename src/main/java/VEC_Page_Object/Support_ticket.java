@@ -6,15 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import AbstractComponents.AbstractComponentsMethods;
 
-       public class Support_ticket  {
+
+       public class Support_ticket extends AbstractComponentsMethods{
 	   public static WebDriver driver;
-       public Support_ticket(WebDriver driver) {
+	   public Support_ticket(WebDriver driver) {
+       super (driver);
 	   this.driver = driver;
 	   PageFactory.initElements(driver, this);
     }
    
-   //=========== Support System =============
+//=========== Support System =============
     
        @FindBy(xpath = "//div[@class='collapse navbar-collapse pull-in']/ul/li[6]") 
        private WebElement Support;
@@ -23,7 +26,7 @@ import org.openqa.selenium.support.PageFactory;
        Support.click();
     }
     
-    //=========== Support field open drop-down select support Ticket =============
+//=========== Support field open drop-down select support Ticket =============
     
        @FindBy(xpath ="//div[@class=\"collapse navbar-collapse pull-in\"]/ul[1]/li[6]/ul/li/a")
        private WebElement Support_Ticket;
@@ -32,7 +35,7 @@ import org.openqa.selenium.support.PageFactory;
        Support_Ticket.click();
     }
   
-    //===========  support Ticket field Click Created Date From =============
+//===========  support Ticket field Click Created Date From =============
     
        @FindBy(xpath ="//input[@name='from_date']")
        private WebElement Date_From ;
@@ -41,7 +44,7 @@ import org.openqa.selenium.support.PageFactory;
        Date_From.click(); 
    }
    
-    //=========== support Ticket field select Created Date From =============
+//=========== support Ticket field select Created Date From =============
    
        @FindBy(xpath = "//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[4]")
        private WebElement Select_Date;
@@ -50,7 +53,7 @@ import org.openqa.selenium.support.PageFactory;
        Select_Date.click();
     }
     
-    //=========== support Ticket field Created Date-To field click:=============
+//=========== support Ticket field Created Date-To field click:=============
     
        @FindBy(xpath ="//input[@name='to_date']")
        private WebElement Date_To ;
@@ -60,7 +63,7 @@ import org.openqa.selenium.support.PageFactory;
   
     }
     
-    //=========== support Ticket field select Created Date To =============
+//=========== support Ticket field select Created Date To =============
     
        @FindBy(xpath = "//table[@class='ui-datepicker-calendar']/tbody/tr[1]/td[6]")
        private WebElement DateTO;
@@ -69,7 +72,7 @@ import org.openqa.selenium.support.PageFactory;
    	   DateTO.click();
     }
     
-    //=========== support Ticket field click Status:=============
+//=========== support Ticket field click Status:=============
     
        @FindBy(xpath = "//select[@name='status_id']")
        private WebElement Status;
@@ -78,7 +81,7 @@ import org.openqa.selenium.support.PageFactory;
        Status.click();
     }
     
-  //=========== support Ticket field open a drop-down Solve Status select:=============
+//=========== support Ticket field open a drop-down Solve Status select:=============
      
        @FindBy(xpath = "//div[@class=\"form-group\"][2]/div/select/option[3]") 
        private WebElement Status_Solve;
@@ -87,7 +90,7 @@ import org.openqa.selenium.support.PageFactory;
        Status_Solve.click();
     }
     
-    //=========== support Ticket field Search button =============
+//=========== support Ticket field Search button =============
     
        @FindBy(xpath = "//button[@type='submit']")
        private WebElement Search_button;
@@ -96,7 +99,7 @@ import org.openqa.selenium.support.PageFactory;
        Search_button.click();
     } 
     
-   //=========== Write Validation message============================	
+//=========== Write Validation message============================	
      
        @FindBy(xpath="//div[@class='clearfix']")
        WebElement message;
@@ -105,7 +108,7 @@ import org.openqa.selenium.support.PageFactory;
 	   return message.getText();
 	}
    
-   //=========== support Ticket field select  =============
+//=========== support Ticket field select  =============
    
        @FindBy(xpath = "//a[@href=\"/EasyCollab/supports/add\"]")
        private WebElement Generate_new_ticket;
@@ -114,7 +117,7 @@ import org.openqa.selenium.support.PageFactory;
   	   Generate_new_ticket.click();
    }
    
-   //=========== support Ticket field click Support Type  =============
+//=========== support Ticket field click Support Type  =============
    
        @FindBy(xpath="//select[@id='SupportSupportTypeId']")
        private WebElement Support_Type;
@@ -123,7 +126,7 @@ import org.openqa.selenium.support.PageFactory;
        Support_Type.click();
     }
     
-  //=========== support Ticket field click Support Type select Hardware & Software =============
+//=========== support Ticket field click Support Type select Hardware & Software =============
      
        @FindBy(xpath="//select[@id=\"SupportSupportTypeId\"]/option[3]")
        private WebElement Hardware_Software;
@@ -132,7 +135,7 @@ import org.openqa.selenium.support.PageFactory;
        Hardware_Software.click();
     }
     
-  //=========== support Ticket field click Notes filed =============
+//=========== support Ticket field click Notes filed =============
     
        @FindBy(xpath= "//textarea[@name='data[Support][note]']")
        private WebElement Notes;
@@ -141,7 +144,7 @@ import org.openqa.selenium.support.PageFactory;
        Notes.click();
      } 
     
-   //=========== support Ticket field Writing Notes filed =============
+//=========== support Ticket field Writing Notes filed =============
     
        @FindBy(xpath= "//textarea[@name='data[Support][note]']")
        private WebElement Notes_Write;

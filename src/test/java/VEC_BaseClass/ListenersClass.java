@@ -51,15 +51,16 @@ public class ListenersClass extends BASE_CLASS implements ITestListener {
 		}
 		// Take screen and Attached to reports
 		String srcFilePath = null;
-		srcFilePath = getScreenshots(result.getMethod().getMethodName(), driver);
+		try {
+			srcFilePath = getScreenshots(result.getMethod().getMethodName(), driver);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//extentTest.get().addScreenCaptureFromPath(srcFilePath, result.getMethod().getMethodName());
 		test.addScreenCaptureFromPath(srcFilePath, result.getMethod().getMethodName());		
+	
 
-	}
-
-	private String getScreenshots(String methodName, WebDriver driver2) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 

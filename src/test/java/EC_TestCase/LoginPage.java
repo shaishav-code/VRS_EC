@@ -11,15 +11,16 @@ import VEC_Page_Object.My_Profile;
 	    @Test(priority = 1)
 	    public void validLogin() throws InterruptedException {		
 		
-		Thread.sleep(2000);
+		
 		Loginlogout();
 		
 		Login_Page MP=new Login_Page(driver);
 		
 		MP.click_profile_1();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		MP.select_LOG_Out();
-		Thread.sleep(3000);	
+	
+	
 	}
 }

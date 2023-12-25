@@ -12,13 +12,8 @@ import VEC_Page_Object.Project_field;
 		  Project_field PJ= new Project_field(driver);
 				
 		  PJ.Click_Project();
-		  Thread.sleep(2000);
-				
-		  PJ.DropDown();
-				
+          PJ.DropDown();
 		  PJ.Set_column();
-		  Thread.sleep(2000);
-				
-		  PJ.click_save();
+	      PJ.click_save();
 }
 }

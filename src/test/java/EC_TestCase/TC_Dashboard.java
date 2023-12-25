@@ -8,14 +8,17 @@ import VEC_Page_Object.DashBord_Field;
         public class TC_Dashboard  extends BASE_CLASS {
 	
      	@Test(priority = 1)
-	    public void validLogin() throws InterruptedException {	
+	    public void Dashboard() throws InterruptedException {	
 		
 		Loginlogout();
-		Thread.sleep(3000);
+		
 		
 		DashBord_Field Ds=new DashBord_Field(driver);
 		
 		Ds.DeshBord();
-		Thread.sleep(3000);	
+		
+		Ds.click_profile_1();
+		
+		Ds.select_LOG_Out();
 }
-}
+        }

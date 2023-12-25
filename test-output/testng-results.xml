@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-15T18:20:57 IST" name="Default suite" finished-at="2023-12-15T18:21:44 IST" duration-ms="46883">
+  <suite started-at="2023-12-25T12:30:34 IST" name="Suite" finished-at="2023-12-25T12:30:56 IST" duration-ms="22031">
     <groups>
     </groups>
-    <test started-at="2023-12-15T18:20:57 IST" name="Default test" finished-at="2023-12-15T18:21:44 IST" duration-ms="46883">
-      <class name="EC_TestCase.TC_Library_Snacks">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Library_Snacks@73a1e9a9]" started-at="2023-12-15T18:20:57 IST" name="lanuchWebsite" finished-at="2023-12-15T18:21:02 IST" duration-ms="4988" status="PASS">
+    <test started-at="2023-12-25T12:30:34 IST" name="Test" finished-at="2023-12-25T12:30:56 IST" duration-ms="22031">
+      <class name="EC_TestCase.TC_Support">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:34 IST" name="lanuchWebsite" finished-at="2023-12-25T12:30:39 IST" duration-ms="5203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Library()[pri:1, instance:EC_TestCase.TC_Library_Snacks@73a1e9a9]" started-at="2023-12-15T18:21:02 IST" name="Library" finished-at="2023-12-15T18:21:42 IST" duration-ms="40105" status="FAIL">
+        <test-method signature="Support()[pri:1, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:39 IST" name="Support" finished-at="2023-12-25T12:30:48 IST" duration-ms="9376" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -22,7 +22,7 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at EC_TestCase.TC_Library_Snacks.Library(TC_Library_Snacks.java:65)
+at EC_TestCase.TC_Support.Support(TC_Support.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,12 +56,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Library -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:EC_TestCase.TC_Library_Snacks@73a1e9a9]" started-at="2023-12-15T18:21:42 IST" name="tearDown" finished-at="2023-12-15T18:21:44 IST" duration-ms="1648" status="PASS">
+        </test-method> <!-- Support -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:49 IST" name="pageObject" finished-at="2023-12-25T12:30:56 IST" duration-ms="6945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- EC_TestCase.TC_Library_Snacks -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Support -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -7,9 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponentsMethods;
 
-     public class My_Profile  {
+     public class My_Profile extends AbstractComponentsMethods {
 	 public WebDriver driver;
 	 public My_Profile(WebDriver driver) {
+		 super (driver);
      this.driver = driver;
 	 PageFactory.initElements(driver, this);
    	   }

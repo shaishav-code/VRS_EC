@@ -7,9 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponentsMethods;
 
-        public class Marketing_Field {
+        public class Marketing_Field extends AbstractComponentsMethods {
         public static WebDriver driver;
         public Marketing_Field(WebDriver driver) {
+        super (driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);
 

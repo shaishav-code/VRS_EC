@@ -6,10 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponentsMethods;
+import net.bytebuddy.implementation.bind.annotation.Super;
 
-        public class Forgot_Password {
+        public class Forgot_Password extends AbstractComponentsMethods {
         public static WebDriver driver;
         public Forgot_Password(WebDriver driver) {
+        	super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

@@ -11,14 +11,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import AbstractComponents.AbstractComponentsMethods;
 
-          public class Timesheets {
+          public class Timesheets extends AbstractComponentsMethods {
 	      public WebDriver driver;
 	      public  Timesheets(WebDriver driver) {
+	    	  super(driver);
 	      this.driver = driver;
 	      PageFactory.initElements(driver, this);
    	  }
     
-    //============Click the TimeSheet field ============
+//============Click the TimeSheet field ============
     
           @FindBy(xpath = "//div[@class='collapse navbar-collapse pull-in']/ul[1]/li[7]") 
           private WebElement TimeSheet;
@@ -27,7 +28,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  TimeSheet.click();
       }
     
-    //============Click the TimeSheet field ============
+//============Click the TimeSheet field ============
     
           @FindBy(xpath = "//div[@class='collapse navbar-collapse pull-in']/ul[1]/li[7]/ul/li/a") 
           private WebElement select_TimeSheet;
@@ -36,7 +37,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  select_TimeSheet.click();
       }
     
-    //============ TimeSheet field click Select Project field ============
+//============ TimeSheet field click Select Project field ============
      
           @FindBy(xpath = "//div[@class='form-group fieldBox'][1]/div") 
           private WebElement Select_Project ;
@@ -45,7 +46,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Select_Project.click();
     }
  
-    //============ TimeSheet field click Select Project name ============
+//============ TimeSheet field click Select Project name ============
     
           @FindBy(xpath="//*[@class='chosen-results']//li")
           private List<WebElement> projectdropdown;
@@ -63,7 +64,7 @@ import AbstractComponents.AbstractComponentsMethods;
 		}
 	}
       
-    //============ TimeSheet field click Select task field ============
+//============ TimeSheet field click Select task field ============
     
           @FindBy(xpath = "//div[@class='form-group fieldBox'][2]/div") 
           private WebElement click_Task ;
@@ -72,7 +73,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  click_Task.click();
     }
     
-    //============ TimeSheet field click Select task (testing)  ============
+ //============ TimeSheet field click Select task (testing)  ============
     
           @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text()=\"Testing\"]") 
           private List<WebElement> Select_Task ;
@@ -89,8 +90,7 @@ import AbstractComponents.AbstractComponentsMethods;
 			}
 		}
  
-    
-    //============TimeSheet field click Work Type field============
+ //============TimeSheet field click Work Type field============
       
            @FindBy(xpath = "//div[@class='form-group fieldBox'][3]/div") 
            private WebElement Select_WorkType ;
@@ -100,9 +100,10 @@ import AbstractComponents.AbstractComponentsMethods;
     }
     
     
-   //============ TimeSheet field click Select Work Type (Free)============
+//============ TimeSheet field click Select Work Type (Free)============
     
-           @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text() = \"Free\"]") 
+          @FindBy(xpath = "//*[@class=\"chosen-results\"]//*[text() = \"Free\"]") 
+           // @FindBy(xpath ="//*[@class='chosen-results']//*[1]")
            private List<WebElement>  WorkType ;
      
 	       public void Work_Type (String select_WorkType )
@@ -117,7 +118,7 @@ import AbstractComponents.AbstractComponentsMethods;
 			}
 		}
       
-    //============ TimeSheet field click Hours field ============
+//============ TimeSheet field click Hours field ============
     
            @FindBy(xpath ="//*[@placeholder='Enter Hours']") 
            private WebElement Select_Hours;
@@ -127,7 +128,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	   Select_Hours.sendKeys("8");
     }
     
-    //============ TimeSheet field click and write Notes field ============  
+//============ TimeSheet field click and write Notes field ============  
     
           @FindBy(xpath ="//textarea[@id=\"notes\"]") 
           private WebElement Select_Notes ;
@@ -137,7 +138,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Select_Notes.sendKeys("Hii");
     }
  
-    //============ TimeSheet field click Add button field ============  
+//============ TimeSheet field click Add button field ============  
     
          @FindBy(xpath =("//button[@type='submit'][normalize-space()='ADD']"))
          private WebElement Add_button ;
@@ -148,24 +149,24 @@ import AbstractComponents.AbstractComponentsMethods;
     }
   
     
-    //============ TimeSheet field click Select Reason field ============
+//============ TimeSheet field click Select Reason field ============
     
-         @FindBy(xpath =("(//div[@class=\"col-sm-8 selectBoxNm\"])[4]"))
+         @FindBy(xpath = "//*[@id='select_notes_chosen']/a")
          private WebElement Select_Reason ;
     
          public void Reason_field()  {
     	 Select_Reason.click();
 
     }
+   
+//============ TimeSheet field click Select Reason (Came Late) ============
     
-    //============ TimeSheet field click Select Reason (Came Late) ============
-    
-        @FindBy(xpath = "//*[@class='chosen-results']//*[text()=\"Came Late\"]") 
+        @FindBy(xpath = "//*[@class='chosen-results']//li") 
         private List<WebElement>  ReasonType ;
    
-	    public void  Reason_Type(String select_Reason )
+	    public void  Select_Reason_Type(String select_Reason )
 	 	{
-			for(WebElement option:WorkType)
+			for(WebElement option:ReasonType)
 			{
 				String Status = option.getText();
 				if(Status.contains(select_Reason))
@@ -175,18 +176,17 @@ import AbstractComponents.AbstractComponentsMethods;
 			}
 		}
 	  
-    //============ TimeSheet field Hours field ============
+//============ TimeSheet field Hours field ============
 	    
-	     @FindBy(xpath ="//*[@id='leaveHours']") 
+	     @FindBy(xpath ="//*[@class='col-sm-8']/input") 
 	     private WebElement Hours ;
 	    
-	     public void Set_Hours()  {
+	     public void write_Hours()  {
 	     Hours.click();
 	     Hours.sendKeys("2");
-  
 	    }
 	    
-    //============ TimeSheet field click Reason Notes field ============
+ //============ TimeSheet field click Reason Notes field ============
     
         @FindBy(xpath ="//textarea[@id='reason_comment']") 
         private WebElement Write_Notes ;
@@ -196,7 +196,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	Write_Notes.sendKeys("Hii Viraj");
       }
       
-    //============ TimeSheet field click Add button-2 field ============  
+//============ TimeSheet field click Add button-2 field ============  
       
         @FindBy(xpath =("(//button[@type=\"submit\"])[2]"))
         private WebElement Add_button_2 ;
@@ -206,7 +206,7 @@ import AbstractComponents.AbstractComponentsMethods;
 
       }
     
-    //============ TimeSheet field click From date field ============ 
+//============ TimeSheet field click From date field ============ 
       
           @FindBy(xpath ="//input[@id='fromDate']")
           private WebElement From_Date ;
@@ -215,7 +215,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  From_Date.click();
       }
       
-    //============ TimeSheet field click prev month button ============ 
+//============ TimeSheet field click prev month button ============ 
       
           @FindBy(xpath ="//div[@id='ui-datepicker-div']/div/a[1]")
           private WebElement PREV_Month ;
@@ -224,7 +224,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  PREV_Month.click();
       }
         
-    //============ TimeSheet field click Select Date ============ 
+//============ TimeSheet field click Select Date ============ 
       
           @FindBy(xpath ="//table[@class=\"ui-datepicker-calendar\"]/tbody/tr[1]/td[4]")
           private WebElement Select_Date ;
@@ -233,7 +233,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Select_Date.click();
       }
       
-    //============ TimeSheet field click To-date field ============ 
+//============ TimeSheet field click To-date field ============ 
       
          @FindBy(xpath =" //input[@name=\"data[Report][to_date]\"]")
          private WebElement To_Date ;
@@ -242,7 +242,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	 To_Date.click();
       }
       
-    //============ TimeSheet field click prev month _To_Date button ============ 
+//============ TimeSheet field click prev month _To_Date button ============ 
       
           @FindBy(xpath ="//div[@id='ui-datepicker-div']/div/a[1]")
           private WebElement Prev_Month ;
@@ -251,7 +251,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Prev_Month.click();
       }
       
-    //============ TimeSheet field select To Date field ============ 
+//============ TimeSheet field select To Date field ============ 
       
           @FindBy(xpath ="//table[@class='ui-datepicker-calendar']/tbody/tr[5]/td[5]")
           private WebElement Selct_Date ;
@@ -260,7 +260,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Selct_Date.click();
       }
       
-   //============ TimeSheet field select Project ============   
+//============ TimeSheet field select Project ============   
          
           @FindBy(xpath = "//div[@id='projectItemDropbox_chosen']//span[contains(text(),'Choose One')]")
           private WebElement  Project ;
@@ -269,24 +269,24 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Project.click();
       }
       
-   //============ TimeSheet field Project Name  ============
+//============ TimeSheet field Project Name  ============
       
            @FindBy(xpath = "//*[@class='chosen-results']//*[text()='Knowledge Upgrade']") 
            private List<WebElement>  Name_Project ;
      
-  	     public void  Project_select(String select_Project )
+  	       public void  Project_select(String select_Project )
   		{
-  			for(WebElement option:Name_Project)
+  		  for(WebElement option:Name_Project)
   			{
-  				String Status = option.getText();
-  				if(Status.contains(select_Project))
+  		  String Status = option.getText();
+  		  if(Status.contains(select_Project))
   				{
-  					option.click();
+  		  option.click();
   				}
   			}
   		}
    
-   //============ TimeSheet field search button  ============   
+//============ TimeSheet field search button  ============   
       
            @FindBy(xpath = " //button[@id='SearchButton']")
            private WebElement  Search_button;
@@ -295,7 +295,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	   Search_button.click();
       }
     
-   //============ TimeSheet field Hours Calculator field============ 
+//============ TimeSheet field Hours Calculator field============ 
       
     
           @FindBy(xpath = "//button[@id='calculatorPopupBtn']")
@@ -305,7 +305,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Hours_Calculator.click();
       }
      
-   //============ TimeSheet field Hours Calculator field ( Hours)============ 
+//============ TimeSheet field Hours Calculator field ( Hours)============ 
       
           @FindBy(xpath = "//input[@id='hours']")
           private WebElement Hours1;
@@ -315,7 +315,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Hours1.sendKeys("8");
       }
       
-   //============ TimeSheet field Hours Calculator field ( Minute)============ 
+//============ TimeSheet field Hours Calculator field ( Minute)============ 
       
           @FindBy(xpath = "//input[@id='minutes']")
           private WebElement Minute1;
@@ -325,7 +325,7 @@ import AbstractComponents.AbstractComponentsMethods;
     	  Minute1.sendKeys("30");
       }
       
-  //============ TimeSheet field Hours Calculator close button============
+//============ TimeSheet field Hours Calculator close button============
       
          @FindBy(xpath = "//a[@class='btn btn-primary']")
          private WebElement close;

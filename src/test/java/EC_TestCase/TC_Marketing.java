@@ -17,7 +17,14 @@ import VEC_Page_Object.Marketing_Field;
 		
 		MT.Click_inquiries();
 		
-		Thread.sleep(2000);
+	
 		MT.Click_Favorite();
+		
+		MT.click_profile_1();
+		
+		MT.select_LOG_Out();
+		
+	   
 	}
+        
 }

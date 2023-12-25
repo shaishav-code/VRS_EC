@@ -10,56 +10,26 @@ import VEC_Page_Object.Library_Snacks;
 	    @Test(priority = 1)
 	    public void Library() throws InterruptedException {		
 		Loginlogout();
-		Thread.sleep(2000);
-		
 		Library_Snacks LS=new Library_Snacks(driver);
-		 
-		LS.Libriry();
-		Thread.sleep(2000);
-		
-		LS.Select_Libriry();
-		Thread.sleep(3000);
-		
-		LS.Libriry();
-		Thread.sleep(2000); 
-		
+		LS.LibrirySnack_field();
+		LS.Select_Libriry_field();
+		LS.LibrirySnack_field();
 		LS.Select_MyLibriry();
-		
-		LS.Libriry();
-		Thread.sleep(2000); 
-		
-	    LS.Select_Snacks();
-		Thread.sleep(2000); 
-		
+		LS.LibrirySnack_field();
+		LS.Select_Snacks();
 		//LS.Select_OrderSnacks();
-		Thread.sleep(2000);
-	
-		
-		LS.Libriry();
-		Thread.sleep(2000);
-		
+	    LS.LibrirySnack_field();
 		LS.Click_MyOrder();
-		Thread.sleep(2000);
-		
 		LS.From_date();
-		
-		LS.Click_prev_icon();
-		Thread.sleep(2000);
-		
+		LS.Click_prevDate_icon();
 		LS.Select_fromDate();
-		Thread.sleep(2000);
-		
 		LS.Click_ToDate();
-		Thread.sleep(2000);
-		
-		LS.Click_prev_icon();
-		
-		LS.select_ToDate();
-		
+		LS.Click_ToDate_Prev_icon();
+	    LS.select_Date();
 		LS.select_Submit();
-		Thread.sleep(2000);	
-		
-		//Assert.assertTrue(false);
+		LS.click_profile_1();
+	    LS.select_LOG_Out();
+     	//Assert.assertTrue(false);
 	}
 
 }

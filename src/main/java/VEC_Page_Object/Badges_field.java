@@ -1,19 +1,25 @@
 package VEC_Page_Object;
 
+import java.util.List;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-           public class Badges_field  {
-	       public static WebDriver driver;
-	       public Badges_field(WebDriver driver) {        
+import AbstractComponents.AbstractComponentsMethods;
+
+           public class Badges_field extends AbstractComponentsMethods {
+           public static WebDriver driver;
+	       public Badges_field(WebDriver driver) {
+		   super(driver);
 		   this.driver = driver;
 		   PageFactory.initElements(driver, this);
-	       }
-		 
-		// ==================== Badges field select ===================
+				
+			}
+
+// ==================== Badges field select ===================
 		 
 		    @FindBy(xpath = "//div[@class= 'collapse navbar-collapse pull-in']/ul/li[5]/a")
 		    private WebElement Badges;
@@ -22,8 +28,8 @@ import org.openqa.selenium.support.PageFactory;
 		    Badges.click();
 		    }
 		
-		// ===== Badges field drop-down select contribution ===========
-		
+// ===== Badges field drop-down select contribution ===========
+
 		    @FindBy(xpath = "//div[@class= 'collapse navbar-collapse pull-in']/ul/li[5]/ul/li[1]/a")
 		    private WebElement contribution;
 
@@ -31,16 +37,26 @@ import org.openqa.selenium.support.PageFactory;
 		    contribution.click();
 		    }
 			
-		//====== contribution field select Employee name ==============
+//====== contribution field select Employee name ==============
 		
-			@FindBy(xpath = "//select[@name='employee_id']/option[21]")
-			private WebElement Employee_name;
-
-			public void Click_Employee_name() {
-			Employee_name.click();
+			
+			  @FindBy(xpath="//*[@name='employee_id']//option")
+	          private List<WebElement> Employee_name;
+	     
+	          public void Select_Employee_name(String projectname)
+		{
+			  for(WebElement option:Employee_name)
+			{
+			  String Status = option.getText();
+			  
+		 	       if(Status.contains(projectname))
+				{
+					option.click();
+				}
 			}
+		}
 	
-		//===== contribution field click Date field ===================
+//===== contribution field click Date field ===================
 								
 			@FindBy(xpath = "//input[@id='from_assign_date']")
 			private WebElement Date;
@@ -49,7 +65,7 @@ import org.openqa.selenium.support.PageFactory;
 			Date.click();
 			}
 					
-		//==== contribution field open calander and select Date =======	
+//==== contribution field open calendar and select Date =======	
 								
 			//@FindBy(xpath = "//table[@class='ui-datepicker-calendar']/tbody/tr[4]/td[4]")
 			@FindBy(xpath = "//div[@id='ui-datepicker-div']/table/tbody/tr[3]/td[4]")
@@ -59,7 +75,7 @@ import org.openqa.selenium.support.PageFactory;
 			Select_Date.click();
 			}
 								
-		//===== contribution field Category drop-down =================		
+//===== contribution field Category drop-down =================		
 				
 			@FindBy(xpath = "//select[@name='category']/option[20]")
 			private WebElement Category;
@@ -69,7 +85,7 @@ import org.openqa.selenium.support.PageFactory;
 			Category.isSelected();
 			}				
 				
-	  //====== contribution field click To-Date field =================
+//====== contribution field click To-Date field =================
 				
 			@FindBy(xpath = "//input[@id='to_assign_date']")
 			private WebElement To_Date;
@@ -77,8 +93,8 @@ import org.openqa.selenium.support.PageFactory;
 			public void Click_TODate() {
 			To_Date.click();
 			}				
-				
-	//===== contribution field open calendar and select To-Date ======	
+
+//=====contribution field open calendar and select To-Date ======	
 				
 			@FindBy(xpath = "//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[3]")
 			private WebElement To_Date_Select;
@@ -87,7 +103,7 @@ import org.openqa.selenium.support.PageFactory;
 			To_Date_Select.click();
 			}	
 				
-	//=========== contribution field Search button ===================
+//===========contribution field Search button ===================
 				
 			@FindBy(xpath = "//button[@type='submit']")
 			private WebElement search_button;
@@ -96,7 +112,7 @@ import org.openqa.selenium.support.PageFactory;
 			search_button.click();
 			}	
 				
-	//=========== Write Validation message============================				
+//=========== Write Validation message============================				
 
 		    @FindBy(xpath="//td[@class='dataTables_empty']")
               WebElement message;
@@ -105,7 +121,7 @@ import org.openqa.selenium.support.PageFactory;
 			return message.getText();
 			}
 											
-	// ======= The open drop-down select Badges field  ===============
+// ======= The open drop-down select Badges field  ===============
 				
 		    @FindBy(xpath="//a[@href=\"/EasyCollab/badges\"]")
              WebElement Select_Badges;
@@ -114,14 +130,14 @@ import org.openqa.selenium.support.PageFactory;
 			Select_Badges.click();
 			}
 				
-	//==================== Scroll down ================================		
+//==================== Scroll down ================================		
 				
 	        public void Show_scrollDown() {
 			JavascriptExecutor js = ((JavascriptExecutor) driver);
 		    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		    }		
 				 
-	//======== Open the drop-down and select Endorse field ============	
+//======== Open the drop-down and select Endorse field ============	
 				  
 			@FindBy(xpath= "//a[@href='/EasyCollab/badges/endorse']")
 	        WebElement Select_Endorse;
@@ -130,7 +146,7 @@ import org.openqa.selenium.support.PageFactory;
 			Select_Endorse.click();
 			}
 				 	
-	//============= Endorse field Select TL name ======================	 
+//============= Endorse field Select TL name ======================	 
 				 
 			 @FindBy(xpath= "//select[@name='data[Score][tl_id]']/option[18]")
 		     WebElement TL_name;
@@ -139,7 +155,7 @@ import org.openqa.selenium.support.PageFactory;
 			 TL_name.click();
 			}
 				 
-	//============= Endorse field Select Category =====================		
+//============= Endorse field Select Category =====================		
 						
 			@FindBy(xpath= "//select[@name='data[Score][category]']/option[20]")
 			WebElement Category_name ;
@@ -148,7 +164,7 @@ import org.openqa.selenium.support.PageFactory;
 		    Category_name.click();
 			}	
 				 
-	//============= Endorse field Select PM Name =======================			 
+//============= Endorse field Select PM Name =======================			 
 				 
 			@FindBy(xpath= "//select[@name='data[Score][pm_id]']/option[18]")
 			WebElement PM_name ;
@@ -157,7 +173,7 @@ import org.openqa.selenium.support.PageFactory;
 			PM_name.click();
 			}	
 					
-	//============= Endorse field Click a Description box ====================				
+//============= Endorse field Click a Description box ====================				
 					
 			@FindBy(xpath= "//textarea[@class='form-control text-input']")
 		    WebElement Description ;
@@ -167,7 +183,7 @@ import org.openqa.selenium.support.PageFactory;
 			
 		    }	
 			
-	//============= Endorse field Description box ====================	
+//============= Endorse field Description box ====================	
 			
 			@FindBy(xpath= "//textarea[@class='form-control text-input']")
 		    WebElement Description_Text ;
@@ -176,7 +192,7 @@ import org.openqa.selenium.support.PageFactory;
 				Description_Text.sendKeys("Hello sir Good Morning");
 		    }
 			
-		//============= Endorse field submit button  ====================	
+//============= Endorse field submit button  ====================	
 					
 			 @FindBy(xpath= "//input[@name='submit']")
 			 WebElement Submit ;
