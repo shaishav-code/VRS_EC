@@ -1,67 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-25T12:30:34 IST" name="Suite" finished-at="2023-12-25T12:30:56 IST" duration-ms="22031">
+  <suite started-at="2023-12-25T12:52:36 IST" name="Suite" finished-at="2023-12-25T12:55:19 IST" duration-ms="163087">
     <groups>
     </groups>
-    <test started-at="2023-12-25T12:30:34 IST" name="Test" finished-at="2023-12-25T12:30:56 IST" duration-ms="22031">
-      <class name="EC_TestCase.TC_Support">
-        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:34 IST" name="lanuchWebsite" finished-at="2023-12-25T12:30:39 IST" duration-ms="5203" status="PASS">
+    <test started-at="2023-12-25T12:52:36 IST" name="Test" finished-at="2023-12-25T12:55:19 IST" duration-ms="163087">
+      <class name="EC_TestCase.TC_Dashboard">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Dashboard@78452606]" started-at="2023-12-25T12:52:48 IST" name="lanuchWebsite" finished-at="2023-12-25T12:52:51 IST" duration-ms="2306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lanuchWebsite -->
-        <test-method signature="Support()[pri:1, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:39 IST" name="Support" finished-at="2023-12-25T12:30:48 IST" duration-ms="9376" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1577)
-at org.testng.Assert.assertTrue(Assert.java:56)
-at org.testng.Assert.assertTrue(Assert.java:66)
-at EC_TestCase.TC_Support.Support(TC_Support.java:31)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="Dashboard()[pri:1, instance:EC_TestCase.TC_Dashboard@78452606]" started-at="2023-12-25T12:52:51 IST" name="Dashboard" finished-at="2023-12-25T12:52:56 IST" duration-ms="5058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dashboard -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Dashboard@78452606]" started-at="2023-12-25T12:52:56 IST" name="pageObject" finished-at="2023-12-25T12:52:57 IST" duration-ms="1763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Dashboard -->
+      <class name="EC_TestCase.TC_badges">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_badges@4470fbd6]" started-at="2023-12-25T12:53:25 IST" name="lanuchWebsite" finished-at="2023-12-25T12:53:28 IST" duration-ms="2966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Badges()[pri:1, instance:EC_TestCase.TC_badges@4470fbd6]" started-at="2023-12-25T12:53:28 IST" name="Badges" finished-at="2023-12-25T12:53:54 IST" duration-ms="26527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Badges -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_badges@4470fbd6]" started-at="2023-12-25T12:53:54 IST" name="pageObject" finished-at="2023-12-25T12:53:56 IST" duration-ms="1693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_badges -->
+      <class name="EC_TestCase.TC_Forgot_password">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Forgot_password@2235eaab]" started-at="2023-12-25T12:55:13 IST" name="lanuchWebsite" finished-at="2023-12-25T12:55:15 IST" duration-ms="2488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Forgot()[pri:1, instance:EC_TestCase.TC_Forgot_password@2235eaab]" started-at="2023-12-25T12:55:15 IST" name="Forgot" finished-at="2023-12-25T12:55:17 IST" duration-ms="2113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Forgot -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Forgot_password@2235eaab]" started-at="2023-12-25T12:55:17 IST" name="pageObject" finished-at="2023-12-25T12:55:19 IST" duration-ms="1370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Forgot_password -->
+      <class name="EC_TestCase.TC_Support">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Support@15d49048]" started-at="2023-12-25T12:53:56 IST" name="lanuchWebsite" finished-at="2023-12-25T12:53:58 IST" duration-ms="2096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Support()[pri:1, instance:EC_TestCase.TC_Support@15d49048]" started-at="2023-12-25T12:53:58 IST" name="Support" finished-at="2023-12-25T12:54:08 IST" duration-ms="9854" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Support -->
-        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Support@6a4f1a55]" started-at="2023-12-25T12:30:49 IST" name="pageObject" finished-at="2023-12-25T12:30:56 IST" duration-ms="6945" status="PASS">
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Support@15d49048]" started-at="2023-12-25T12:54:08 IST" name="pageObject" finished-at="2023-12-25T12:54:09 IST" duration-ms="1490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageObject -->
       </class> <!-- EC_TestCase.TC_Support -->
+      <class name="EC_TestCase.TC_TimeSheet">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:09 IST" name="lanuchWebsite" finished-at="2023-12-25T12:54:12 IST" duration-ms="2450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="TimeSheet()[pri:1, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:12 IST" name="TimeSheet" finished-at="2023-12-25T12:54:18 IST" duration-ms="6650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TimeSheet -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:18 IST" name="pageObject" finished-at="2023-12-25T12:54:21 IST" duration-ms="2510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:21 IST" name="lanuchWebsite" finished-at="2023-12-25T12:54:23 IST" duration-ms="2299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="TimeSheet1()[pri:2, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:23 IST" name="TimeSheet1" finished-at="2023-12-25T12:54:39 IST" duration-ms="16123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TimeSheet1 -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_TimeSheet@7098b907]" started-at="2023-12-25T12:54:39 IST" name="pageObject" finished-at="2023-12-25T12:54:41 IST" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_TimeSheet -->
+      <class name="EC_TestCase.TC_myprofile">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_myprofile@13526e59]" started-at="2023-12-25T12:54:59 IST" name="lanuchWebsite" finished-at="2023-12-25T12:55:01 IST" duration-ms="2149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Profile()[pri:1, instance:EC_TestCase.TC_myprofile@13526e59]" started-at="2023-12-25T12:55:01 IST" name="Profile" finished-at="2023-12-25T12:55:10 IST" duration-ms="9232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Profile -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_myprofile@13526e59]" started-at="2023-12-25T12:55:10 IST" name="pageObject" finished-at="2023-12-25T12:55:13 IST" duration-ms="2778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_myprofile -->
+      <class name="EC_TestCase.TC_Marketing">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Marketing@448c8166]" started-at="2023-12-25T12:53:07 IST" name="lanuchWebsite" finished-at="2023-12-25T12:53:10 IST" duration-ms="2418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Project()[pri:1, instance:EC_TestCase.TC_Marketing@448c8166]" started-at="2023-12-25T12:53:10 IST" name="Project" finished-at="2023-12-25T12:53:22 IST" duration-ms="12205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Project -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Marketing@448c8166]" started-at="2023-12-25T12:53:22 IST" name="pageObject" finished-at="2023-12-25T12:53:25 IST" duration-ms="2678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Marketing -->
+      <class name="EC_TestCase.LoginPage">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.LoginPage@2f953efd]" started-at="2023-12-25T12:52:36 IST" name="lanuchWebsite" finished-at="2023-12-25T12:52:41 IST" duration-ms="5366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="validLogin()[pri:1, instance:EC_TestCase.LoginPage@2f953efd]" started-at="2023-12-25T12:52:41 IST" name="validLogin" finished-at="2023-12-25T12:52:47 IST" duration-ms="6022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.LoginPage@2f953efd]" started-at="2023-12-25T12:52:47 IST" name="pageObject" finished-at="2023-12-25T12:52:48 IST" duration-ms="1079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.LoginPage -->
+      <class name="EC_TestCase.TC_Library_Snacks">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Library_Snacks@503f91c3]" started-at="2023-12-25T12:54:41 IST" name="lanuchWebsite" finished-at="2023-12-25T12:54:43 IST" duration-ms="2091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Library()[pri:1, instance:EC_TestCase.TC_Library_Snacks@503f91c3]" started-at="2023-12-25T12:54:43 IST" name="Library" finished-at="2023-12-25T12:54:57 IST" duration-ms="14368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Library -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Library_Snacks@503f91c3]" started-at="2023-12-25T12:54:57 IST" name="pageObject" finished-at="2023-12-25T12:54:59 IST" duration-ms="1667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Library_Snacks -->
+      <class name="EC_TestCase.TC_Project">
+        <test-method is-config="true" signature="lanuchWebsite()[pri:0, instance:EC_TestCase.TC_Project@147e2ae7]" started-at="2023-12-25T12:52:57 IST" name="lanuchWebsite" finished-at="2023-12-25T12:52:59 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lanuchWebsite -->
+        <test-method signature="Project()[pri:1, instance:EC_TestCase.TC_Project@147e2ae7]" started-at="2023-12-25T12:52:59 IST" name="Project" finished-at="2023-12-25T12:53:05 IST" duration-ms="5636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Project -->
+        <test-method is-config="true" signature="pageObject()[pri:0, instance:EC_TestCase.TC_Project@147e2ae7]" started-at="2023-12-25T12:53:05 IST" name="pageObject" finished-at="2023-12-25T12:53:07 IST" duration-ms="2246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageObject -->
+      </class> <!-- EC_TestCase.TC_Project -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
