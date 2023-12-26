@@ -11,12 +11,13 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Resource.ExtentReporterNG;
+import Resource.Extend_report;
+
 
 public class ListenersClass extends BASE_CLASS implements ITestListener {
 		ExtentTest test;
 		WebDriver driver;
-	ExtentReports extent = ExtentReporterNG.getReportObject();
+	ExtentReports extent = Extend_report.extentReportGenerator();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 		
 	@Override

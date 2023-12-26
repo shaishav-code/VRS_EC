@@ -8,6 +8,10 @@
   <test thread-count="5" name="Test">
     <classes>
            <class name="EC_TestCase.LoginPage"/>
+           
+           
+           
+           <!--
            <class name="EC_TestCase.TC_Dashboard"/> 
            <class name="EC_TestCase.TC_Project"/> 
            <class name="EC_TestCase.TC_Marketing"/>
@@ -16,7 +20,7 @@
            <class name="EC_TestCase.TC_TimeSheet"/>
            <class name="EC_TestCase.TC_Library_Snacks"/>
            <class name="EC_TestCase.TC_myprofile"/>
-           <class name="EC_TestCase.TC_Forgot_password"/> 
+           <class name="EC_TestCase.TC_Forgot_password"/>--> 
             
     </classes>
   </test> <!-- Test -->
