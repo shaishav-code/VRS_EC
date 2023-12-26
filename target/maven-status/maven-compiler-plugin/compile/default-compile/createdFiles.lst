@@ -1,0 +1,12 @@
+Resource\Extend_report.class
+VEC_Page_Object\Forgot_Password.class
+VEC_Page_Object\Project_field.class
+VEC_Page_Object\Login_Page.class
+VEC_Page_Object\Support_ticket.class
+VEC_Page_Object\Timesheets.class
+VEC_Page_Object\Marketing_Field.class
+VEC_Page_Object\Badges_field.class
+VEC_Page_Object\Library_Snacks.class
+AbstractComponents\AbstractComponentsMethods.class
+VEC_Page_Object\DashBord_Field.class
+VEC_Page_Object\My_Profile.class
