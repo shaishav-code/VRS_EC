@@ -1,9 +1,13 @@
 package AbstractComponents;
 
+import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractComponentsMethods {
@@ -32,4 +36,19 @@ public class AbstractComponentsMethods {
 	public void select_LOG_Out() {
 		LOG_Out.click();
 	}
+	
+	   //===========Wait Time For Element To Clickable================
+	
+		public void waitTimeForWebElementListToAppear(List<WebElement> eleListAppear) 
+		{
+			wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.visibilityOfAllElements(eleListAppear));
+		}
+		
+	    public void waitTimeForElementToClickable(WebElement eleClick) 
+	    {
+	    	   wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+				wait.until(ExpectedConditions.elementToBeClickable(eleClick));
+		}
+
 }
