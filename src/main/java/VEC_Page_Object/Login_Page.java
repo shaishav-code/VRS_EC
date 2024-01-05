@@ -16,61 +16,55 @@ public class Login_Page extends AbstractComponentsMethods{
 			
 		}
 
-	// Invoke Method
+	//===========Invoke Method================
 
-	public void invokeURL() {
+	   public void invokeURL() {
 		driver.get("https://eros.narola.online:444/EasyCollab/");
 	}
 	
-	// Email field xpath/element
+	//=====Email field xpath/element===========
 	
-	@FindBy(xpath = "//input[@type='email']")
-	private WebElement userEmail;
+	   @FindBy(xpath = "//input[@type='email']")
+	   private WebElement userEmail;
 
-	public void useremail(String email) {
-		userEmail.sendKeys(email);
+	   public void useremail(String email) {
+	   userEmail.sendKeys(email);
 	}
 	
-	// PAssword field xpath/element
+	//=====PAssword field xpath/element==========
 	
-	@FindBy(xpath = "//input[@type='password']")
-	private WebElement Password;
+	   @FindBy(xpath = "//input[@type='password']")
+	   private WebElement Password;
 
-	public void password(String password) {
-		Password.sendKeys(password);
+	   public void password(String password) {
+	   Password.sendKeys(password);
 }
 	
-	// SingIn field xpath/element
+	//======SingIn field xpath/element========
 	
-	@FindBy(xpath = "//button[@type='submit']")
-	private WebElement SingIn;
+	   @FindBy(xpath = "//button[@type='submit']")
+	   private WebElement SingIn;
 
-	public void singin() {
-		SingIn.click();
-
+	   public void singin() {
+	   SingIn.click();
+}
 	
-	}
-	
-       //===========My profile click ==================
+    //===========My profile click ======================
     
        @FindBy(xpath = "//a[normalize-space()='VRS']")
    	   private WebElement myProfile;
 
    	   public void click_profile_1() {
-   		myProfile.click();
+   	   myProfile.click();
    	}
 	
-	   //===========My profile click open drop-down select Logout==================
+   //===========My profile click open drop-down select Logout==================
 
-   	@FindBy(xpath = "//a[normalize-space()='Logout']")
-   	private WebElement LOG_Out;
+      @FindBy(xpath = "//a[normalize-space()='Logout']")
+   	  private WebElement LOG_Out;
 
-   	public void select_LOG_Out() {
-   		LOG_Out.click();
+      public void select_LOG_Out() {
+   	  LOG_Out.click();
    	}
    	
-   	
-	
-	
-	
-}
+  }

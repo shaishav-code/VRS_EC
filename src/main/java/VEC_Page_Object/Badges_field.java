@@ -10,12 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import AbstractComponents.AbstractComponentsMethods;
 
-           public class Badges_field extends AbstractComponentsMethods {
-           public static WebDriver driver;
-	       public Badges_field(WebDriver driver) {
-		   super(driver);
-		   this.driver = driver;
-		   PageFactory.initElements(driver, this);
+            public class Badges_field extends AbstractComponentsMethods {
+            public static WebDriver driver;
+	        public Badges_field(WebDriver driver) {
+		    super(driver);
+		    this.driver = driver;
+		    PageFactory.initElements(driver, this);
 				
 			}
 
@@ -39,19 +39,17 @@ import AbstractComponents.AbstractComponentsMethods;
 			
 //====== contribution field select Employee name ==============
 		
-			
-			  @FindBy(xpath="//*[@name='employee_id']//option")
-	          private List<WebElement> Employee_name;
+			@FindBy(xpath="//*[@name='employee_id']//option")
+	        private List<WebElement> Employee_name;
 	     
-	          public void Select_Employee_name(String projectname)
+	        public void Select_Employee_name(String projectname)
 		{
-			  for(WebElement option:Employee_name)
+		    for(WebElement option:Employee_name)
 			{
-			  String Status = option.getText();
-			  
-		 	       if(Status.contains(projectname))
+			String Status = option.getText();
+			if(Status.contains(projectname))
 				{
-					option.click();
+			option.click();
 				}
 			}
 		}
@@ -180,8 +178,7 @@ import AbstractComponents.AbstractComponentsMethods;
 							
 			public void Click_Description() {
 			Description.click();
-			
-		    }	
+			}	
 			
 //============= Endorse field Description box ====================	
 			
@@ -189,18 +186,25 @@ import AbstractComponents.AbstractComponentsMethods;
 		    WebElement Description_Text ;
 							
 			public void Write_Description(String string) {
-				Description_Text.sendKeys("Hello sir Good Morning");
+			Description_Text.sendKeys("Hello sir Good Morning");
 		    }
 			
 //============= Endorse field submit button  ====================	
 					
-			 @FindBy(xpath= "//input[@name='submit']")
-			 WebElement Submit ;
+			@FindBy(xpath= "//input[@name='submit']")
+			WebElement Submit ;
 									
-			 public void click_submit() {
-			 Submit.click();					
-			 }							
-}								
+			public void click_submit() {
+			Submit.click();					
+			}
+			 
+			@FindBy(xpath= "//input[@name='submit']")
+            WebElement Submit1 ;
+
+            void click_submit1() {
+            Submit.click();					
+}		
+   }        
 					
 					
 					

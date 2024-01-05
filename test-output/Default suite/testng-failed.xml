@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EC_TestCase.TC_badges">
+      <class name="EC_TestCase.TC_TimeSheet">
         <methods>
-          <include name="Badges"/>
           <include name="pageObject"/>
           <include name="lanuchWebsite"/>
+          <include name="TimeSheet1"/>
         </methods>
-      </class> <!-- EC_TestCase.TC_badges -->
+      </class> <!-- EC_TestCase.TC_TimeSheet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

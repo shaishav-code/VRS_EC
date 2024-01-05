@@ -16,12 +16,11 @@ import AbstractComponents.AbstractComponentsMethods;
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
 }
-	
 	@FindBy (xpath = "//a[normalize-space()='Dashboard']")
 	private WebElement Deshbord;
 	
 	public void DeshBord() {
-		Deshbord.click();
+	Deshbord.click();
 		
 	}
 }

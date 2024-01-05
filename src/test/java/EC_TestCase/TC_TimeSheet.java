@@ -24,11 +24,9 @@ import VEC_Page_Object.Timesheets;
 		//TS.Add_Icon();
 		TS.click_profile_1();
 		TS.select_LOG_Out();
-	
-	    }
+        }
 	    
-	  
-		//--------------------------------------------------------------------
+//--------------------------------------------------------------------
 		
 		@Test(priority = 2)
 		 public void TimeSheet1() throws InterruptedException {				
@@ -41,7 +39,7 @@ import VEC_Page_Object.Timesheets;
 		TL.Select_Reason_Type("Left Early");
 	    TL.write_Hours();
 		TL.Select_Notes();
-		TL.Add_Button();
+		//TL.Add_Button();
 		TL.Click_from_date();
 	    TL.Click_Prev_month();
         TL.select_Date();
@@ -56,11 +54,9 @@ import VEC_Page_Object.Timesheets;
 		TL.Click_Minute_1();
 		TL.Click_Close();
 		Thread.sleep(3000);
-		
 		TL.click_profile_1();
 		Thread.sleep(2000);
-		
-		TL.select_LOG_Out();
+	    TL.select_LOG_Out();
 				
 }
 }

@@ -42,7 +42,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		public void click_SubmitButton() {
 		Submit_button.click();			
-		}
+	}
 				
 	//==============Security Question================	
 		
@@ -51,7 +51,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		public void click_SecurityQuestion() {
 		Security_Question.click();			
-				}
+	}
 		
 	//==============Select the Security Question================
 				
@@ -60,7 +60,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		 public void select_SecurityQuestion() {
 		 Select_Security_Question.click();			
-				}
+	}
 				
     //==============Select the Security Question and answer================
 				
@@ -69,7 +69,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		 public void select_answer() {
 		 Get_answer.click();		
-				}		
+	}		
 				
   //==============Select the Security Question/answer================
 				
@@ -78,7 +78,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		 public void Write_answer() {
 		 Answer.sendKeys("123456");		
-				}	
+	}	
 				
    //==============Select the Security Question/answer Submit button================
 				
@@ -87,7 +87,7 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		 public void Submit_field() {
 		 Click_submit.click();
-				}	
+	}	
  
 	//==============Select the Security SingIN================
 							
@@ -96,5 +96,5 @@ import net.bytebuddy.implementation.bind.annotation.Super;
 
 		 public void Click_SingIN() {
 		 SelectSingIN.click();
-				}						
+	}						
    }

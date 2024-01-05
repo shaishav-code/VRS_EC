@@ -10,7 +10,6 @@ import VEC_Page_Object.Project_field;
 		  public void Project() throws InterruptedException {		
 		  Loginlogout();
 		  Project_field PJ= new Project_field(driver);
-				
 		  PJ.Click_Project();
           PJ.DropDown();
 		  PJ.Set_column();
